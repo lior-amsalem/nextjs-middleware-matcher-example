@@ -1,5 +1,7 @@
 In here we'll take a look how to create a basic [nextjs middleware matcher](https://lior.live/software-engineering/how-to-use-matcher-in-next-js-middleware/). 
 
+This is example of how we use a nextjs middleware matcher to redirect a "admin" url path to "login" url page (for whatever reason) ther are more examples, and you can read about what nextjs middleware matcher is and also what other ideas and examples you can come up with for nextjs middleware matcher below.
+
 ## Whats Nextjs Middleware matcher
 The matcher in Next.js middleware is a way to control when and where your middleware runs. Middleware is like a checkpoint that Next.js hits before showing a page, where you can add custom logic like checking if a user is logged in, redirecting them to another page, or modifying their request.
 
@@ -25,9 +27,6 @@ Suppose you want users coming from different campaigns or sources to see customi
 
 Tracking and Logging User Activity on Sensitive Pages
 For pages that handle sensitive data, like /account/settings or /billing/*, use the matcher to trigger middleware that logs user actions. This can help track important user activities (e.g., profile changes) for security auditing without impacting the rest of the site.
-
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
 
