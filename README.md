@@ -1,3 +1,32 @@
+In here we'll take a look how to create a basic [nextjs middleware matcher](https://lior.live/software-engineering/how-to-use-matcher-in-next-js-middleware/). 
+
+## Whats Nextjs Middleware matcher
+The matcher in Next.js middleware is a way to control when and where your middleware runs. Middleware is like a checkpoint that Next.js hits before showing a page, where you can add custom logic like checking if a user is logged in, redirecting them to another page, or modifying their request.
+
+With matcher, you define specific routes (URLs or URL patterns) that the middleware should apply to. This way, instead of running middleware on every single page of your app, it only runs on the paths you specify.
+
+For example, you could set the matcher to run the middleware only on URLs like /admin or any route under /dashboard (such as /dashboard/settings). This selective approach keeps the app efficient and ensures that middleware only impacts the routes you need it to.
+
+
+## Nextjs Middleware matcher Examples/Ideas
+Here are five ideas for using the Next.js middleware matcher to enhance your app's functionality:
+
+Restrict Access to Admin Pages
+Use the matcher to apply middleware only to routes like /admin or /admin/*. This can check if a user has admin privileges and redirect unauthorized users to a "Not Authorized" page or back to the home page.
+
+Language Redirect Based on Locale
+With the matcher, you could run middleware on routes like /fr/* or /es/*, checking if the user's preferred language matches the route. If not, the middleware could redirect them to a version of the site in their language, improving localization.
+
+Age Gate for Restricted Content
+Use middleware with a matcher for paths such as /restricted or /mature-content/*. This could check if the user has verified their age and, if not, redirect them to an age verification page before allowing access.
+
+Theme-Specific Pages Based on URL Parameters
+Suppose you want users coming from different campaigns or sources to see customized pages. The matcher can be applied to paths like /promo/*, allowing middleware to identify users from specific sources and show a customized theme or layout.
+
+Tracking and Logging User Activity on Sensitive Pages
+For pages that handle sensitive data, like /account/settings or /billing/*, use the matcher to trigger middleware that logs user actions. This can help track important user activities (e.g., profile changes) for security auditing without impacting the rest of the site.
+
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
